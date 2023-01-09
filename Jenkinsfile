@@ -14,6 +14,11 @@ pipeline {
         echo 'try to add the jenkins url in webhook and then commit will trigger jenkins job'
         echo 'check this job webhook configuration in settings of repo for referance'
       }
-    }  
+    }
+    stage('read console output for instructions') {
+      steps {
+        echo 'triggered from github commit'
+      }
+    }
   }
 }
